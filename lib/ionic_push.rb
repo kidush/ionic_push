@@ -5,17 +5,17 @@ require "ionic_push/request"
 require "ionic_push/push"
 
 module IonicPush
+  include IonicPush::Push
   class << self
     attr_accessor :configuration
   end
 
-  def self.setup
+  def self.configure
     @configuration ||= IonicPush::Configuration.new
     yield(configuration)
   end
 
-  def self.push(users, message)
-    request = IonicPush::Request.new(@configuration)
-    request.push
+  def self.push(tokens, notification_params = {})
+    notification(tokens, notification_params)
   end
 end

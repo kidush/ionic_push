@@ -12,7 +12,7 @@ module IonicPush
       @options = {}
     end
 
-    def push
+    def go
       self.class.post("/notifications", request_params)
     end
 
@@ -23,7 +23,8 @@ module IonicPush
     end
 
     def body
-      {body: @data.to_json}
+      @data.merge!({profile: @configuration.profile})
+      {body: @data.to_json }
     end
 
     def request_params
