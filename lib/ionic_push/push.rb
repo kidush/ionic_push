@@ -7,14 +7,14 @@ module IonicPush
 
     module ClassMethods
       def notification(tokens, notification = {})
-        req = IonicPush::Request.new(@configuration, {
+        req_push = IonicPush::Request.new(@configuration, {
           notification: {
             title: notification[:title],
             message: notification[:message]
           }
         })
 
-        req.go
+        req_push.send
       end
     end
 

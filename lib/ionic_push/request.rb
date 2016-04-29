@@ -12,7 +12,7 @@ module IonicPush
       @options = {}
     end
 
-    def go
+    def send
       self.class.post("/notifications", request_params)
     end
 
