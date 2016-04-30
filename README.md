@@ -20,7 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-You'll need create a configuration file and set your Ionic [API TOKEN](http://docs.ionic.io/v2.0.0-beta/docs/api-getting-started#section-authentication) and a [Security Profile](http://docs.ionic.io/v2.0.0-beta/docs/security-profiles).
+### Configuration
+
+Before all You'll need your Ionic [API TOKEN](http://docs.ionic.io/v2.0.0-beta/docs/api-getting-started#section-authentication) and a [Security Profile](http://docs.ionic.io/v2.0.0-beta/docs/security-profiles).
+
+You'll have create a configuration file.
+
+Ex.`initializers/ionic_push.rb`
+```ruby
+IonicPush.configure do |config|
+  config.api_key = '<YOUR-API-KEY>'
+  config.profile = '<YOUR-SECURIY-PROFILE>'
+end
+```
+
 
 
 ## To do
