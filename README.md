@@ -22,7 +22,7 @@ Or install it yourself as:
 
 ### Configuration
 
-Before all You'll need your Ionic [API TOKEN](http://docs.ionic.io/v2.0.0-beta/docs/api-getting-started#section-authentication) and a [Security Profile](http://docs.ionic.io/v2.0.0-beta/docs/security-profiles).
+Before all You'll need your Ionic [API TOKEN](http://docs.ionic.io/v2.0.0-beta/docs/api-getting-started#section-authentication) and a [Security Profile](http://docs.ionic.io/v2.0.0-beta/docs/security-profiles). For more details about Ionic Push see the [official documentation](http://docs.ionic.io/docs/push-sending-push).
 
 You'll have create a configuration file.
 
