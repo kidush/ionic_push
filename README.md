@@ -1,6 +1,6 @@
 # IonicPush
 
-Just a simple gem for to send push notificaitons through Ionic Push API.
+Just a simple gem to send push notificaitons through Ionic Push API.
 
 ## Installation
 
