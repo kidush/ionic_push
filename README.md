@@ -34,6 +34,11 @@ IonicPush.configure do |config|
 end
 ```
 
+### The basic
+
+```ruby
+IonicPush.push(['your', 'devices', 'tokens'], {title: ''Push Title', message: 'Push Message'})
+```
 
 
 ## To do
