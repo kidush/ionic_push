@@ -23,8 +23,12 @@ module IonicPush
     end
 
     def body
-      @data.merge!({profile: @configuration.profile})
+      profile
       {body: @data.to_json }
+    end
+
+    def profile
+      @data.merge!({profile: @configuration.profile})
     end
 
     def request_params
