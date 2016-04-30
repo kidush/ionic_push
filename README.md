@@ -20,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-You'll need create a configuration file and set your Ionic [API TOKEN]http://docs.ionic.io/v2.0.0-beta/docs/api-getting-started#section-authentication() and a [Security Profile](http://docs.ionic.io/v2.0.0-beta/docs/security-profiles).
+You'll need create a configuration file and set your Ionic [API TOKEN](http://docs.ionic.io/v2.0.0-beta/docs/api-getting-started#section-authentication) and a [Security Profile](http://docs.ionic.io/v2.0.0-beta/docs/security-profiles).
 
 
 ## To do
