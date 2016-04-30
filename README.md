@@ -1,8 +1,6 @@
 # IonicPush
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/ionic_push`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Just a simple gem for to send push notificaitons through Ionic Push API.
 
 ## Installation
 
@@ -22,7 +20,12 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+You'll need create a configuration file and set your Ionic [API TOKEN]http://docs.ionic.io/v2.0.0-beta/docs/api-getting-started#section-authentication() and a [Security Profile](http://docs.ionic.io/v2.0.0-beta/docs/security-profiles).
+
+
+## To do
+
+
 
 ## Development
 
