@@ -1,8 +1,8 @@
-require "ionic_push/version"
-require "ionic_push/configuration"
-require "ionic_push/base_uri"
-require "ionic_push/request"
-require "ionic_push/push"
+require 'ionic_push/version'
+require 'ionic_push/configuration'
+require 'ionic_push/base_uri'
+require 'ionic_push/request'
+require 'ionic_push/push'
 
 module IonicPush
   include IonicPush::Push

@@ -1,3 +1,3 @@
 module IonicPush
-  BASE_URI = 'https://api.ionic.io/push'
+  BASE_URI = 'https://api.ionic.io/push'.freeze
 end

@@ -13,22 +13,23 @@ module IonicPush
     end
 
     def send
-      self.class.post("/notifications", request_params)
+      self.class.post('/notifications', request_params)
     end
 
     private
 
     def headers
-      {headers: {'Content-Type': 'application/json', 'Authorization': "Bearer #{@configuration.api_key}"}}
+      auth = "Bearer #{@configuration.api_key}"
+      { headers: { 'Content-Type': 'application/json', 'Authorization': auth } }
     end
 
     def body
       profile
-      {body: @data.to_json }
+      { body: @data.to_json }
     end
 
     def profile
-      @data.merge!({profile: @configuration.profile})
+      @data.merge!(profile: @configuration.profile)
     end
 
     def request_params

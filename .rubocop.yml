@@ -1,0 +1,7 @@
+Documentation:
+   Enabled: false
+AllCops:
+  TargetRubyVersion: 2.3
+  Excludes:
+    - ionic_push.gemspec
+    - bin/**
