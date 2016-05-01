@@ -44,6 +44,15 @@ IonicPush.push(['your', 'devices', 'tokens'], {title: 'Push Title', message: 'Pu
 
 ## To do
 
+- [x] Basic API Usage
+- [ ] Sengind Push to Ionic User ID's
+- [ ] Scheduling a push for later delivery
+- [ ] Adding custom data to your notificaitons
+- [ ] Phonegap Push plugin options
+- [ ] Customizing Notification appearance
+- [ ] Templating your push notification
+- [ ] Notification's priority
+- [ ] Checking the status of push
 
 
 ## Development
