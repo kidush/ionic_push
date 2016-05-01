@@ -1,3 +1,4 @@
+[![Code Climate](https://codeclimate.com/github/kidush/ionic_push/badges/gpa.svg)](https://codeclimate.com/github/kidush/ionic_push)
 # IonicPush
 
 Just a simple gem to send push notificaitons through Ionic Push API.
