@@ -20,7 +20,7 @@ module IonicPush
     private
 
     def headers
-      @options.merge!(:headers => content_type)
+      @options[:headers] = content_type
       @options[:headers].merge!(authorization)
     end
 
