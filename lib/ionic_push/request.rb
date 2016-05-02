@@ -13,28 +13,38 @@ module IonicPush
     end
 
     def send
+      puts request_params
       self.class.post('/notifications', request_params)
     end
 
     private
 
     def headers
+      @options.merge!(:headers => content_type)
+      @options[:headers].merge!(authorization)
+    end
+
+    def content_type
+      { 'Content-Type' => 'application/json' }
+    end
+
+    def authorization
       auth = "Bearer #{@configuration.api_key}"
-      { headers: { 'Content-Type': 'application/json', 'Authorization': auth } }
+      { 'Authorization' => auth }
     end
 
-    def body
-      profile
-      { body: @data.to_json }
-    end
-
-    def profile
+    def security_profile
       @data.merge!(profile: @configuration.profile)
     end
 
+    def body
+      @options.merge!(body: @data.to_json)
+    end
+
     def request_params
-      @options.merge!(headers)
-      @options.merge!(body)
+      headers
+      security_profile
+      body
     end
   end
 end
