@@ -13,7 +13,6 @@ module IonicPush
     end
 
     def send
-      puts request_params
       self.class.post('/notifications', request_params)
     end
 
