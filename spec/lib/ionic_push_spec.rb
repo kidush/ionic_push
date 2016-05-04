@@ -1,19 +1,14 @@
 require 'spec_helper'
 
 describe IonicPush do
-  context "When a valid API Token and Security Profile is passed" do
-    before do
+  describe '.configure' do
+    it "yields configuration object" do
+      object_yielded = nil
       IonicPush.configure do |config|
-        config.api_key = '<MY-API-KEY>'
-        config.profile = '<MY-SECURITY-PROFILE>'
+        object_yielded = config
       end
-    end
 
-    it "has an API TOKEN" do
-      expect(IonicPush.configuration.api_key).not_to eq(nil)
+      expect(object_yielded).to eq(IonicPush.configuration)
     end
-  end
-
-  context "When a API Token or profile does not passed or it is invalid." do
   end
 end
