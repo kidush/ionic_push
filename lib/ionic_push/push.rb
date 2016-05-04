@@ -5,7 +5,7 @@ module IonicPush
     end
 
     module ClassMethods
-      def notification(tokens, notification_params = {})
+      def notification(tokens, notification_params)
         notification = Notification.new(tokens, notification_params)
         req_push = IonicPush::Request.new(@configuration, notification.body)
 
@@ -17,14 +17,24 @@ module IonicPush
       def initialize(tokens, notification)
         @tokens = tokens
         @notification = notification
+        @options = {}
       end
 
       def body
-        {
-          tokens: @tokens,
-          notification: {
-            title: @notification[:title],
-            message: @notification[:message]
+        @options.merge!(device_tokens)
+        @options.merge!(notification)
+      end
+
+      def device_tokens
+        { tokens: @tokens }
+      end
+
+      def notification
+        @options[:notification] = {
+          title: @notification[:title],
+          message: @notification[:message],
+          android: {
+            icon: "https://pbs.twimg.com/profile_images/617058765167329280/9BkeDJlV.png"
           }
         }
       end
