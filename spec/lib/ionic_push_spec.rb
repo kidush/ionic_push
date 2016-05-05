@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe IonicPush do
   describe '.configure' do
-    it "yields configuration object" do
+    it 'yields configuration object' do
       object_yielded = nil
       IonicPush.configure do |config|
         object_yielded = config
