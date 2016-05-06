@@ -2,6 +2,8 @@ require 'ionic_push/version'
 require 'ionic_push/configuration'
 require 'ionic_push/base_uri'
 require 'ionic_push/request'
+
+require 'ionic_push/push/notification'
 require 'ionic_push/push'
 
 module IonicPush
@@ -15,7 +17,7 @@ module IonicPush
     yield(configuration)
   end
 
-  def self.push(tokens, notification_params = {})
+  def self.push(tokens, notification_params)
     notification(tokens, notification_params)
   end
 end

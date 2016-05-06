@@ -10,21 +10,15 @@ module IonicPush
       end
 
       def body
+        raise ArgumentError, 'Notification params must be a Hash' unless @notification.respond_to?(:to_hash)
         @options.merge!(device_tokens)
-        @options.merge!(notification)
+        @options.merge!(notification: notification)
       end
 
       private
 
       def device_tokens
         { tokens: @tokens }
-      end
-
-      def notification
-        @options[:notification] = {
-          title: @notification[:title],
-          message: @notification[:message]
-        }
       end
     end
   end

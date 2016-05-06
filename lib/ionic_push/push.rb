@@ -1,5 +1,3 @@
-require 'ionic_push/push/notification'
-
 module IonicPush
   module Push
     def self.included(base)
