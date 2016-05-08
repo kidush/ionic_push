@@ -7,6 +7,14 @@ describe IonicPush::Push::Notification do
       IonicPush::Push::Notification.new(%w(my tokens), notification_body)
     end
 
+    let!(:fail_notification) {
+      IonicPush::Push::Notification.new(%w(my tokens), nil)
+    }
+
+    it 'raise an error when notification is not a hash' do
+      expect {  fail_notification.body }.to raise_error(ArgumentError)
+    end
+
     it 'returns a hash' do
       expect(notification.body).to be_a_kind_of(Hash)
     end
@@ -21,4 +29,5 @@ describe IonicPush::Push::Notification do
       expect(notification.body).to include(tokens)
     end
   end
+
 end

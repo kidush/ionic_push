@@ -3,10 +3,11 @@ module IonicPush
     class Notification
       attr_accessor :tokens, :notification
 
-      def initialize(tokens, notification = nil)
+      def initialize(tokens, notification, icon = nil)
         @tokens = tokens
         @notification = notification
         @options = {}
+        @icon = icon
       end
 
       def body
