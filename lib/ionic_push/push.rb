@@ -6,7 +6,7 @@ module IonicPush
 
     module ClassMethods
       def notification(tokens, notification_params)
-        notification = Notification.new(tokens, notification_params)
+        notification = IonicPush::Push::Notification.new(tokens, notification_params, @configuration.icon)
         req_push = IonicPush::Request.new(@configuration, notification.body)
 
         req_push.send
