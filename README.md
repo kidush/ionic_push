@@ -44,15 +44,15 @@ IonicPush.push(['your', 'devices', 'tokens'], { title: 'Push Title', message: 'P
 ### Adding Custom data to your notificaitons
 
 ```ruby
-IonicPush.push(
-  ['your', 'devices', 'tokens'],
-  {
-    title: 'Push Title',
-    message: 'Push Message',
-    android: {
-      data: "https://pbs.twimg.com/profile_images/617058765167329280/9BkeDJlV.png"
-    }
-  })
+notification_params = {
+  title: 'Push Title',
+  message: 'Push Message',
+  android: {
+    data: "https://pbs.twimg.com/profile_images/617058765167329280/9BkeDJlV.png"
+  }
+}
+
+IonicPush.push(['your', 'devices', 'tokens'], notification_params)
 ```
 
 ## To do
