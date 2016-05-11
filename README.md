@@ -47,6 +47,23 @@ IonicPush.push(['your', 'devices', 'tokens'], { title: 'Push Title', message: 'P
 notification_params = {
   title: 'Push Title',
   message: 'Push Message',
+  ios: {
+	message: "Hello iOS",
+  },
+  android: {
+    message: "Hello Android"
+  }
+}
+
+IonicPush.push(['your', 'devices', 'tokens'], notification_params)
+```
+
+### Phonegap push plugin options
+
+```ruby
+notification_params = {
+  title: 'Push Title',
+  message: 'Push Message',
   android: {
     data: "https://pbs.twimg.com/profile_images/617058765167329280/9BkeDJlV.png"
   }
