@@ -38,9 +38,22 @@ end
 ### The basic
 
 ```ruby
-IonicPush.push(['your', 'devices', 'tokens'], {title: 'Push Title', message: 'Push Message'})
+IonicPush.push(['your', 'devices', 'tokens'], { title: 'Push Title', message: 'Push Message' })
 ```
 
+### Adding Custom data to your notificaitons
+
+```ruby
+IonicPush.push(
+  ['your', 'devices', 'tokens'],
+  {
+    title: 'Push Title',
+    message: 'Push Message',
+    android: {
+      data: "https://pbs.twimg.com/profile_images/617058765167329280/9BkeDJlV.png"
+    }
+  })
+```
 
 ## To do
 
