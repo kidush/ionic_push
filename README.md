@@ -71,6 +71,26 @@ notification_params = {
 
 IonicPush.push(['your', 'devices', 'tokens'], notification_params)
 ```
+### Customizing Notification Appearance
+
+```ruby
+notification_params = {
+  title: 'Push Title',
+  message: 'Push Message',
+  android: {
+	message: 'Hello Android',
+    icon: 'ionitron.png'
+  },
+  ios: {
+    message: 'Hello iOS',
+    badge: 3,
+    sound: 'ios-sound.wav'
+  }
+}
+
+IonicPush.push(['your', 'devices', 'tokens'], notification_params)
+```
+---
 
 ## To do
 
