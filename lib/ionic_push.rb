@@ -4,6 +4,7 @@ require 'ionic_push/base_uri'
 require 'ionic_push/request'
 
 require 'ionic_push/push/notification'
+require 'ionic_push/push/status'
 require 'ionic_push/push'
 
 module IonicPush
